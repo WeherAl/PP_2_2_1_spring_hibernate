@@ -1,6 +1,4 @@
 package hiber.dao;
-
-import hiber.model.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,7 +12,7 @@ public class UserDaoImp<T> implements UserDao<T> {
     private SessionFactory sessionFactory;
 
     @Autowired
-    UserDaoImp(SessionFactory sessionFactory) {
+    private UserDaoImp(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
@@ -40,7 +38,6 @@ public class UserDaoImp<T> implements UserDao<T> {
 
         query.setParameter("modelName", model);
         query.setParameter("series", serie);
-
 
         return query.getResultList();
 

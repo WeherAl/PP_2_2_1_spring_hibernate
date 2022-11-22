@@ -14,12 +14,12 @@ public class CarDaoImp implements CarDao {
     private SessionFactory sessionFactory;
 
     @Autowired
-    CarDaoImp(SessionFactory sessionFactory) {
+    private CarDaoImp(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
     @Override
-    public void add(Car t) {
+    public void addCar(Car t) {
         sessionFactory.getCurrentSession().save(t);
     }
 

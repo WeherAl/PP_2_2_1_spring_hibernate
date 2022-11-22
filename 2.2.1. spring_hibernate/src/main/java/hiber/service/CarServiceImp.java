@@ -8,25 +8,25 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Transactional(readOnly = true)
 @Service
 public class CarServiceImp<T> implements CarService {
 
     private CarDaoImp carDaoImp;
 
     @Autowired
-    CarServiceImp(CarDaoImp carDaoImp) {
+    private CarServiceImp(CarDaoImp carDaoImp) {
         this.carDaoImp = carDaoImp;
     }
 
     @Transactional
     @Override
-    public void add(Car car) {
-        carDaoImp.add(car);
+    public void addCar(Car car) {
+        carDaoImp.addCar(car);
     }
 
-    @Transactional(readOnly = true)
     @Override
-    public List<Car> listUsers() {
+    public List<Car> getCars() {
         return carDaoImp.getCars();
     }
 

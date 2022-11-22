@@ -11,10 +11,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.sql.SQLException;
 import java.util.List;
 
-/**
-
- */
-
 public class MainApp {
     public static void main(String[] args) throws SQLException {
         AnnotationConfigApplicationContext context =
@@ -47,7 +43,7 @@ public class MainApp {
             System.out.println();
         }
 
-        List<User> userListWithCar = userService.usersWithSomeCar("RollsRoyce",7);
+        List<User> userListWithCar = userService.getUsersWithSomeCar("RollsRoyce",7);
         for (User user : userListWithCar) {
             System.out.println("Id = " + user.getId());
             System.out.println("First Name = " + user.getFirstName());
