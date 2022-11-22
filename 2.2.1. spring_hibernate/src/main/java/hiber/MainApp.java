@@ -20,7 +20,7 @@ public class MainApp {
 
         User user1 = new User("User1", "Lastname1", "user1@mail.ru");
         user1.setCar(new Car("Mark", 3));
-        userService.add(user1);
+        userService.addUser(user1);
 
 
         addUserWithCar("Alex", "Zurisk", "avc@mail.ru", "BMW", 5, userService);
@@ -64,7 +64,7 @@ public class MainApp {
         car.setUser(user);
         user.setCar(car);
 
-        service.add(user);
+        service.addUser(user);
 
     }
 

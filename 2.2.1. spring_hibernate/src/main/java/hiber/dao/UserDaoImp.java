@@ -17,7 +17,7 @@ public class UserDaoImp<T> implements UserDao<T> {
     }
 
     @Override
-    public void add(T user) {
+    public void addUser(T user) {
         sessionFactory.getCurrentSession().save(user);
     }
 

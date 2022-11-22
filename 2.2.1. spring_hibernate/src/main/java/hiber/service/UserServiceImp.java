@@ -20,8 +20,8 @@ public class UserServiceImp<T> implements UserService<T> {
 
     @Transactional
     @Override
-    public void add(T user) {
-        userDao.add(user);
+    public void addUser(T user) {
+        userDao.addUser(user);
     }
 
     @Override
