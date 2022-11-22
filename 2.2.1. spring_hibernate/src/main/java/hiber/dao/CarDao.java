@@ -8,5 +8,5 @@ public interface CarDao {
 
     void add(Car car);
 
-    List listUsers();
+    List getCars();
 }
